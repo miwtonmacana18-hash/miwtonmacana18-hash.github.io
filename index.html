@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio académico de Milton Macana. Formação, projectos, competências e percurso académico.">
+  <meta name="theme-color" content="#10233f">
+  <title>Milton Macana | Portfólio Académico</title>
+  <style>
+    :root {
+      --navy:#10233f; --blue:#2457a7; --cyan:#5fc4d5; --ink:#17243a;
+      --muted:#65738a; --paper:#f4f7fb; --white:#fff; --line:#e1e8f1;
+      --shadow:0 18px 45px rgba(16,35,63,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--paper);color:var(--ink);line-height:1.65}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1100px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-weight:850;letter-spacing:.08em;color:var(--navy)}
+    .navlinks{display:flex;align-items:center;gap:22px;font-size:.9rem;color:#526078}
+    .navlinks a:hover{color:var(--blue)}
+    .lang{border:1px solid var(--line);background:#fff;padding:8px 12px;border-radius:999px;font-weight:750;color:var(--navy);cursor:pointer}
+    .hero{background:linear-gradient(120deg,#10233f 0%,#183d70 65%,#23618b 100%);color:white;padding:92px 0 86px;overflow:hidden;position:relative}
+    .hero:after{content:"";position:absolute;width:380px;height:380px;border:1px solid rgba(255,255,255,.13);border-radius:50%;right:-90px;top:-130px;box-shadow:0 0 0 45px rgba(255,255,255,.035),0 0 0 95px rgba(255,255,255,.025)}
+    .eyebrow{color:#9fe3ed;text-transform:uppercase;letter-spacing:.17em;font-size:.76rem;font-weight:800}
+    h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.04;letter-spacing:-.045em;margin:18px 0}
+    .hero p{max-width:640px;color:#dce7f5;font-size:1.12rem}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-block;padding:12px 19px;border-radius:9px;font-weight:750}
+    .primary{background:#fff;color:var(--navy)}
+    .secondary{border:1px solid rgba(255,255,255,.45);color:#fff}
+    section{padding:76px 0}
+    .section-head{max-width:680px;margin-bottom:30px}
+    .kicker{font-size:.75rem;text-transform:uppercase;letter-spacing:.16em;color:var(--blue);font-weight:850}
+    h2{font-size:clamp(1.8rem,4vw,2.55rem);line-height:1.15;color:var(--navy);margin:8px 0 12px;letter-spacing:-.03em}
+    .lead{color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
+    .panel,.tile{background:var(--white);border:1px solid var(--line);border-radius:17px;padding:26px;box-shadow:var(--shadow)}
+    .panel p{color:var(--muted);margin-bottom:0}
+    .note{border-left:4px solid var(--cyan);padding:4px 0 4px 16px;color:#526078}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .tile{box-shadow:none}
+    .tile .num{font-size:.78rem;color:var(--blue);font-weight:850;letter-spacing:.12em}
+    .tile h3{margin:10px 0 7px;color:var(--navy)}
+    .tile p{margin:0;color:var(--muted);font-size:.94rem}
+    .placeholder{display:inline-block;margin-top:15px;padding:5px 9px;background:#eef4fb;color:#49617e;border-radius:6px;font-size:.75rem;font-weight:700}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .skill{padding:9px 13px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#43536c;font-size:.9rem}
+    .contact{background:var(--navy);color:white;border-radius:22px;padding:34px}
+    .contact h2{color:#fff}
+    .contact p{color:#d2deed}
+    footer{padding:28px 0;color:#718096;font-size:.85rem}
+    .footer-row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media(max-width:760px){
+      .navlinks{display:none}.hero{padding:72px 0 68px}
+      .about-grid,.grid{grid-template-columns:1fr}
+      section{padding:58px 0}.panel,.tile{padding:22px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio">MILTON MACANA</a>
+    <nav class="navlinks" aria-label="Navegação principal">
+      <a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a>
+      <a href="#formacao" data-pt="Formação" data-en="Education">Formação</a>
+      <a href="#projectos" data-pt="Projectos" data-en="Projects">Projectos</a>
+      <a href="#competencias" data-pt="Competências" data-en="Skills">Competências</a>
+      <a href="#contacto" data-pt="Contacto" data-en="Contact">Contacto</a>
+    </nav>
+    <button class="lang" id="langBtn" type="button" aria-label="Change language">EN</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <div class="eyebrow" data-pt="Portfólio académico" data-en="Academic portfolio">Portfólio académico</div>
+      <h1>Milton<br>Macana<span style="color:#75d4df">.</span></h1>
+      <p data-pt="Um espaço dedicado à aprendizagem, ao desenvolvimento de competências e à partilha de projectos académicos." data-en="A space dedicated to learning, skills development and sharing academic projects.">Um espaço dedicado à aprendizagem, ao desenvolvimento de competências e à partilha de projectos académicos.</p>
+      <div class="actions">
+        <a class="btn primary" href="#sobre" data-pt="Conhecer o percurso" data-en="Explore my journey">Conhecer o percurso</a>
+        <a class="btn secondary" href="#projectos" data-pt="Ver projectos" data-en="View projects">Ver projectos</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker" data-pt="Apresentação" data-en="Introduction">Apresentação</div>
+        <h2 data-pt="Sobre mim" data-en="About me">Sobre mim</h2>
+        <p class="lead" data-pt="Conhecimento em construção, com curiosidade, disciplina e vontade de evoluir." data-en="Knowledge in progress, driven by curiosity, discipline and a desire to grow.">Conhecimento em construção, com curiosidade, disciplina e vontade de evoluir.</p>
+      </div>
+      <div class="about-grid">
+        <div class="panel">
+          <h3 data-pt="O meu percurso" data-en="My journey">O meu percurso</h3>
+          <p data-pt="Sou Milton Macana. Este portfólio reúne informações sobre a minha formação, interesses académicos, competências e trabalhos. O conteúdo será actualizado à medida que o meu percurso evoluir." data-en="I am Milton Macana. This portfolio brings together information about my education, academic interests, skills and work. It will be updated as my journey develops.">Sou Milton Macana. Este portfólio reúne informações sobre a minha formação, interesses académicos, competências e trabalhos. O conteúdo será actualizado à medida que o meu percurso evoluir.</p>
+        </div>
+        <div class="panel">
+          <h3 data-pt="Objectivo" data-en="Purpose">Objectivo</h3>
+          <p class="note" data-pt="Apresentar o meu percurso de forma clara e profissional, organizar os meus trabalhos e documentar a minha evolução académica." data-en="To present my journey clearly and professionally, organise my work and document my academic progress.">Apresentar o meu percurso de forma clara e profissional, organizar os meus trabalhos e documentar a minha evolução académica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="formacao" style="background:#edf2f8">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker" data-pt="Percurso" data-en="Background">Percurso</div>
+        <h2 data-pt="Formação académica" data-en="Education">Formação académica</h2>
+        <p class="lead" data-pt="Esta área será preenchida com os dados de formação que confirmares." data-en="This section will be completed with the education details you confirm.">Esta área será preenchida com os dados de formação que confirmares.</p>
+      </div>
+      <div class="tile">
+        <div class="num">01 / EDUCATION</div>
+        <h3 data-pt="Instituição e curso" data-en="Institution and programme">Instituição e curso</h3>
+        <p data-pt="Adicionar instituição, curso, datas e principais disciplinas." data-en="Add institution, programme, dates and key subjects.">Adicionar instituição, curso, datas e principais disciplinas.</p>
+        <span class="placeholder" data-pt="A preencher" data-en="To be completed">A preencher</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projectos">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker" data-pt="Trabalho e prática" data-en="Work and practice">Trabalho e prática</div>
+        <h2 data-pt="Projectos académicos" data-en="Academic projects">Projectos académicos</h2>
+        <p class="lead" data-pt="Um espaço para destacar trabalhos escolares, experiências práticas, pesquisas e apresentações." data-en="A place to showcase school assignments, practical experiences, research and presentations.">Um espaço para destacar trabalhos escolares, experiências práticas, pesquisas e apresentações.</p>
+      </div>
+      <div class="grid">
+        <article class="tile"><div class="num">PROJECTO 01</div><h3 data-pt="Título do projecto" data-en="Project title">Título do projecto</h3><p data-pt="Breve descrição do problema, objectivo e resultado." data-en="Briefly describe the problem, objective and outcome.">Breve descrição do problema, objectivo e resultado.</p><span class="placeholder" data-pt="Exemplo a adicionar" data-en="Add an example">Exemplo a adicionar</span></article>
+        <article class="tile"><div class="num">PROJECTO 02</div><h3 data-pt="Pesquisa ou trabalho" data-en="Research or assignment">Pesquisa ou trabalho</h3><p data-pt="Apresentar o tema, as ferramentas utilizadas e o que foi aprendido." data-en="Present the topic, tools used and what was learned.">Apresentar o tema, as ferramentas utilizadas e o que foi aprendido.</p><span class="placeholder" data-pt="Exemplo a adicionar" data-en="Add an example">Exemplo a adicionar</span></article>
+        <article class="tile"><div class="num">PROJECTO 03</div><h3 data-pt="Experiência prática" data-en="Practical experience">Experiência prática</h3><p data-pt="Descrever uma actividade ou experiência relevante." data-en="Describe a relevant activity or experience.">Descrever uma actividade ou experiência relevante.</p><span class="placeholder" data-pt="Exemplo a adicionar" data-en="Add an example">Exemplo a adicionar</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="competencias" style="background:#edf2f8">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker" data-pt="Conhecimentos" data-en="Knowledge">Conhecimentos</div>
+        <h2 data-pt="Competências" data-en="Skills">Competências</h2>
+        <p class="lead" data-pt="Vamos listar apenas competências que possas demonstrar com exemplos." data-en="We will list only skills you can demonstrate with examples.">Vamos listar apenas competências que possas demonstrar com exemplos.</p>
+      </div>
+      <div class="skills">
+        <span class="skill" data-pt="Matemática — a definir" data-en="Mathematics — to confirm">Matemática — a definir</span>
+        <span class="skill" data-pt="Ciências — a definir" data-en="Science — to confirm">Ciências — a definir</span>
+        <span class="skill" data-pt="Informática — a definir" data-en="Computing — to confirm">Informática — a definir</span>
+        <span class="skill" data-pt="Comunicação — a definir" data-en="Communication — to confirm">Comunicação — a definir</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap">
+      <div class="contact">
+        <div class="kicker" style="color:#83d9e3" data-pt="Vamos conversar" data-en="Get in touch">Vamos conversar</div>
+        <h2 data-pt="Contacto académico" data-en="Academic contact">Contacto académico</h2>
+        <p data-pt="O endereço de e-mail profissional será adicionado depois de ser confirmado. Evita publicar número de telefone, morada ou documentos pessoais." data-en="A professional email address can be added once confirmed. Avoid publishing a phone number, home address or personal documents.">O endereço de e-mail profissional será adicionado depois de ser confirmado. Evita publicar número de telefone, morada ou documentos pessoais.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© <span id="year"></span> Milton Macana</span>
+    <span data-pt="Portfólio académico · Versão inicial" data-en="Academic portfolio · First version">Portfólio académico · Versão inicial</span>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('langBtn');
+  let lang = 'pt';
+  function setLanguage(next) {
+    lang = next;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-pt][data-en]').forEach(el => {
+      el.textContent = el.dataset[lang];
+    });
+    btn.textContent = lang === 'pt' ? 'EN' : 'PT';
+    btn.setAttribute('aria-label', lang === 'pt' ? 'Switch to English' : 'Mudar para português');
+  }
+  btn.addEventListener('click', () => setLanguage(lang === 'pt' ? 'en' : 'pt'));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
